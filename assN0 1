@@ -1,77 +1,74 @@
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
 
-struct Student{
+struct student {
     int ID;
     char name[50];
-    int marks;
-};
+} s[3]; // Can store up to 3 students
 
-void insert(struct Student students[],int*count){
-    printf("\nEnter the Student ID:");
-    scanf("%d",&students[*count].ID);
-    printf("Enter the Student Name:");
-    scanf(%[^\n]",student[*count].Name);
-    printf("Enter Student Marks:");
-    scanf("%d",&students[*count].marks);
-    (*count)++;
-    printf("Student Inserted Successfully!!\n");
-    
+int num = 0;
+
+void insertstudent(int n) {
+    if (num + n > 3) {
+        printf("Cannot insert more than 3 students!\n");
+        return;
     }
     
-    
-void delate(struct Student students[],int*count,int id){
-     int i;
-     for(i=0;i<*count;i++)
-     {
-       if(Student[i].ID==id{
-       for(intj=i;j<*count-1;i++){
-       student[j]=student[j+1];
-       }
-       (*count)--;
-       printf("Student With ID %d delated successfully!\n",id):
-       return;
-       }
-     }
-      printf("Student with ID %d not found!\n",id);
-      
-      }
-       
-       
-void modify(stuct Student student[],int count){
-   int count,int id){
-   for(int i=0;i<count;i++){
-   printf("\nEnter New Name;");
-   scanf(%[^\n]",student[i].name);
-   printf("Enter the New Marks:"); 
-   scanf(%d",&student[i].Marks):
-   printf("Student record Modifing successfully!\n");
-   return;
-   }
-  }
-  printf("Student with ID%d not found!!\n",id);
-  }
-      int main()   {
-      int choice   ;
-      
-   do{
-      printf("\nMENU\n");
-      printf("\n1.Insert Student\n2.delate Student");
-      printf("Enter your Choice:");
-      scanf(%d",&choice:");
-      
-    switch(choice){
-    case 1:printf("\nHow many Student you want to insert????");
-           int n;
-           scanf(%d",&n);
-           insrtstudent(n);
-           break ;
-    case 2:delatstudent():
-           break ;
-           default: printf("\nInvalid Choice! Please try again.\n");
+    for (int i = 0; i < n; i++) {
+        printf("\nEnter details for student %d:\n", num + 1);
+        printf("Enter ID: ");
+        scanf("%d", &s[num].ID);
+        printf("Enter Name: ");
+        scanf("%s", s[num].name);
+        num++; // Increase student count
     }
-    while(choice!=2):
+
+    printf("\nStudent Record Inserted Successfully!\n");
+}
+
+void deletestudent() {
+    int position;
+    printf("Enter the position of the student to delete (1-%d): ", num);
+    scanf("%d", &position);
+
+    if (position < 1 || position > num) {
+        printf("Invalid position! Try again.\n");
+        return;
     }
-    
-    
-return 0;
+
+    for (int i = position - 1; i < num - 1; i++) {
+        s[i] = s[i + 1]; // Shift students
+    }
+    num--; // Reduce student count
+    printf("\nStudent Record Deleted Successfully!\n");
+}
+
+int main() {
+    int choice;
+    do {
+        printf("\nMENU\n");
+        printf("1. Insert Student\n");
+        printf("2. Delete Student\n");
+        printf("3. Exit\n");
+        printf("Enter Your Choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                printf("\nHow many students do you want to insert? ");
+                int n;
+                scanf("%d", &n);
+                insertstudent(n);
+                break;
+            case 2:
+                deletestudent();
+                break;
+            case 3:
+                printf("Exiting the program...\n");
+                break;
+            default:
+                printf("Invalid Choice! Please try again.\n");
+        }
+    } while (choice != 3);
+
+    return 0;
+}
