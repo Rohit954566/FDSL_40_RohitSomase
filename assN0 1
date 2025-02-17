@@ -1,0 +1,77 @@
+#include<stdio.h>
+#include<string.h>
+
+struct Student{
+    int ID;
+    char name[50];
+    int marks;
+};
+
+void insert(struct Student students[],int*count){
+    printf("\nEnter the Student ID:");
+    scanf("%d",&students[*count].ID);
+    printf("Enter the Student Name:");
+    scanf(%[^\n]",student[*count].Name);
+    printf("Enter Student Marks:");
+    scanf("%d",&students[*count].marks);
+    (*count)++;
+    printf("Student Inserted Successfully!!\n");
+    
+    }
+    
+    
+void delate(struct Student students[],int*count,int id){
+     int i;
+     for(i=0;i<*count;i++)
+     {
+       if(Student[i].ID==id{
+       for(intj=i;j<*count-1;i++){
+       student[j]=student[j+1];
+       }
+       (*count)--;
+       printf("Student With ID %d delated successfully!\n",id):
+       return;
+       }
+     }
+      printf("Student with ID %d not found!\n",id);
+      
+      }
+       
+       
+void modify(stuct Student student[],int count){
+   int count,int id){
+   for(int i=0;i<count;i++){
+   printf("\nEnter New Name;");
+   scanf(%[^\n]",student[i].name);
+   printf("Enter the New Marks:"); 
+   scanf(%d",&student[i].Marks):
+   printf("Student record Modifing successfully!\n");
+   return;
+   }
+  }
+  printf("Student with ID%d not found!!\n",id);
+  }
+      int main()   {
+      int choice   ;
+      
+   do{
+      printf("\nMENU\n");
+      printf("\n1.Insert Student\n2.delate Student");
+      printf("Enter your Choice:");
+      scanf(%d",&choice:");
+      
+    switch(choice){
+    case 1:printf("\nHow many Student you want to insert????");
+           int n;
+           scanf(%d",&n);
+           insrtstudent(n);
+           break ;
+    case 2:delatstudent():
+           break ;
+           default: printf("\nInvalid Choice! Please try again.\n");
+    }
+    while(choice!=2):
+    }
+    
+    
+return 0;
