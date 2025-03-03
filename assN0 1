@@ -134,3 +134,89 @@ int main() {
     }
     return 0 ;
 }
+
+
+
+
+
+*********************************************************************************************************************************************************************************************************
+#  OUTPUT
+
+1. Insert Book
+2. Delete Book
+3. Modify Book
+4. Display Book
+5. Exit
+Enter your choice: 1
+Enter the number of Books to insert:3
+
+Details of the Books
+
+Enter the Details of Book 1
+Enter the ID: 34
+Enter the Name: rohit
+Enter the Author:jkgsad
+Enter the Price: 345
+
+Enter the Details of Book 2
+Enter the ID: 2345
+Enter the Name: agjs
+Enter the Author:gsfdf
+Enter the Price: 2354
+
+Enter the Details of Book 3
+Enter the ID: 65
+Enter the Name: wsf
+Enter the Author:kjfg
+Enter the Price: 435
+
+Books Record Inserted Successfully.
+
+1. Insert Book
+2. Delete Book
+3. Modify Book
+4. Display Book
+5. Exit
+Enter your choice: 
+
+2
+Enter the ID of the Book to delete: 2345
+Books Record Deleted Successfully.
+Book with ID 2345 not found.
+
+1. Insert Book
+2. Delete Book
+3. Modify Book
+4. Display Book
+5. Exit
+Enter your choice: 3
+Enter the ID of the Book to modify: 34
+
+What do you want to modify?
+1.Book ID
+2.Name
+3.Author
+4.Price
+Enter your choice:2
+Enter the new book name: pythan
+Name Updated Sucessfully!
+1. Insert Book
+2. Delete Book
+3. Modify Book
+4. Display Book
+5. Exit
+Enter your choice: 4
+ID	 Name	 Author	Price	34	 pythan	 jkgsad	345
+65	 wsf	 kjfg	435
+
+1. Insert Book
+2. Delete Book
+3. Modify Book
+4. Display Book
+5. Exit
+Enter your choice: 5
+Exiting the program.
+Invalid choice. Please try again.
+
+
+=== Code Execution Successful ===
