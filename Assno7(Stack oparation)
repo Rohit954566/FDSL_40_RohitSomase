@@ -74,3 +74,49 @@ int main()
 
 
 *********************************************************************************||*****************************************************************************************************************************88
+
+
+
+Enter the size of array4
+--------STACK OPERATIONS--------
+1.insert Element in the stack (push)
+2.Delete Element in the stack (pop)
+3.Display Element
+4.Exit
+Enter the choice:1
+Enter the element:1
+Element are inserted in stack.
+--------STACK OPERATIONS--------
+1.insert Element in the stack (push)
+2.Delete Element in the stack (pop)
+3.Display Element
+4.Exit
+Enter the choice:1
+Enter the element:2
+Element are inserted in stack.
+--------STACK OPERATIONS--------
+1.insert Element in the stack (push)
+2.Delete Element in the stack (pop)
+3.Display Element
+4.Exit
+Enter the choice:1
+Enter the element:3
+Element are inserted in stack.
+--------STACK OPERATIONS--------
+1.insert Element in the stack (push)
+2.Delete Element in the stack (pop)
+3.Display Element
+4.Exit
+Enter the choice:1
+Enter the element:4
+Element are inserted in stack.
+--------STACK OPERATIONS--------
+1.insert Element in the stack (push)
+2.Delete Element in the stack (pop)
+3.Display Element
+4.Exit
+Enter the choice:3
+4
+3
+2
+1
