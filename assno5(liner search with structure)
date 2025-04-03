@@ -95,3 +95,61 @@ int main() {
 
     return 0;
 }
+
+
+***************************************************************************************************************************************************************************************************
+OUTPUT=
+
+Menu:
+1. Insert a book
+2. Search books by ID
+3. Display all books
+4. Exit
+Enter your choice: 1
+Enter the number of books to insert:3
+
+Enter details of books:
+Enter ID: 234
+Enter Title: C++
+Enter Author: SHUBHAM
+Enter Price: 456
+Enter ID: 213
+Enter Title: PYTHAN
+Enter Author: ROHIT
+Enter Price: 546
+Enter ID: 345
+Enter Title: C
+Enter Author: KRISHNA
+Enter Price: 233
+Book inserted successfully!
+
+Menu:
+1. Insert a book
+2. Search books by ID
+3. Display all books
+4. Exit
+Enter your choice: 3
+
+Book details are:
+1)
+ID: 234
+Title: C++
+Author: SHUBHAM
+Price: 456.0
+2)
+ID: 213
+Title: PYTHAN
+Author: ROHIT
+Price: 546.0
+3)
+ID: 345
+Title: C
+Author: KRISHNA
+Price: 233.0
+
+Menu:
+1. Insert a book
+2. Search books by ID
+3. Display all books
+4. Exit
+Enter your choice: 
