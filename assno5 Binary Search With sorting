@@ -116,3 +116,65 @@ void searchbinary(int a[],int n){
      
     return 0;
     }
+
+
+*********************************************************************************************************************************************************************************************
+
+
+#OUTPUT
+
+
+
+Enter the size of array:5
+Enter array elements:1
+2
+3
+5
+6
+
+Menu:
+1. sort by bubble sort
+2. sort by selection sort
+3. sort by insertion sort
+4. search element by binary search
+5.Exit
+Enter your choice: 6
+Wrong choice! Please enter a valid option.
+
+Menu:
+1. sort by bubble sort
+2. sort by selection sort
+3. sort by insertion sort
+4. search element by binary search
+5.Exit
+Enter your choice: 1
+
+Menu:
+1. sort by bubble sort
+2. sort by selection sort
+3. sort by insertion sort
+4. search element by binary search
+5.Exit
+Enter your choice: 2
+
+Menu:
+1. sort by bubble sort
+2. sort by selection sort
+3. sort by insertion sort
+4. search element by binary search
+5.Exit
+Enter your choice: 4
+Enter element to search:2
+Element 2 found at position 1
+
+Menu:
+1. sort by bubble sort
+2. sort by selection sort
+3. sort by insertion sort
+4. search element by binary search
+5.Exit
+Enter your choice: 5
+Exiting program...
+
+
+=== Code Execution Successful ===
