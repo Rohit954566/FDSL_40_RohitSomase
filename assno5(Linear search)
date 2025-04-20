@@ -10,7 +10,7 @@ int main()
    {
      scanf("%d",&a[i]);
      }
-    printf("Enter element yo search:");
+    printf("Enter element you search:");
     scanf("%d",&key);
     int found=0;
     for(i=0;i<n;i++)
