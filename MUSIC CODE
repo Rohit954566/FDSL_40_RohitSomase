@@ -1,0 +1,142 @@
+#include <stdio.h>
+#include <string.h>
+
+#define SIZE 5
+
+struct Song {
+    int id;
+    char name[100];
+};
+
+struct Song queue[SIZE];
+int front = -1, rear = -1;
+
+void enQueue(struct Song s) {
+    if ((rear + 1) % SIZE == front) {
+        printf("Playlist is full!\n");
+    }
+    if (front == -1 && rear == -1) {
+        front = rear = 0;
+        queue[rear] = s;
+        printf("Added: %s to ID: %d\n", s.name, s.id);
+    } else {
+        rear = (rear + 1) % SIZE;
+        queue[rear] = s;
+        printf("Added: %s to ID: %d\n", s.name, s.id);
+    }
+}
+
+void deQueue() {
+    if (front == -1 && rear == -1) {
+        printf("Playlist is empty!\n");
+    }
+    else if (front == rear) {
+        printf("Deleted: %s (ID: %d)\n", queue[front].name, queue[front].id);
+        front = rear = -1;
+    } else {
+        printf("Deleted: %s (ID: %d)\n", queue[front].name, queue[front].id);
+        front = (front + 1) % SIZE;
+    }
+}
+
+void display() {
+    if (front == -1 && rear == -1) {
+        printf("Playlist is empty!\n");
+    }
+    printf("Playlist:\n");
+    int i = front;
+    while (i != rear) {
+        printf("ID: %d, Name: %s\n", queue[i].id, queue[i].name);
+        i = (i + 1) % SIZE;
+    }
+    printf("ID: %d, Name: %s\n", queue[rear].id, queue[rear].name);
+}
+
+int main() {
+    int choice;
+    struct Song s;
+
+    while (1) {
+        printf("\n1. Add Song\n2. Delete Song\n3. Show Playlist\n4. Exit\nChoose: ");
+        scanf("%d", &choice);
+
+        if (choice == 1) {
+            printf("Enter Song ID: ");
+            scanf("%d", &s.id);
+            printf("Enter Song Name : ");
+            scanf(" %[^\n]", s.name);
+            enQueue(s);
+        } else if (choice == 2) {
+            deQueue();
+        } else if (choice == 3) {
+            display();
+        } else if (choice == 4) {
+            break;
+        } else {
+            printf("Invalid choice!\n");
+        }
+    }
+
+    return 0;
+}
+
+
+***************************************************************************************************************************************************************************************************************************************
+
+
+#OUTPUT
+
+1. Add Song
+2. Delete Song
+3. Show Playlist
+4. Exit
+Choose: 1
+Enter Song ID: siya ram
+Enter Song Name : Added: siya ram to ID: 0
+
+1. Add Song
+2. Delete Song
+3. Show Playlist
+4. Exit
+Choose: 1
+Enter Song ID: sajna
+Enter Song Name : Added: sajna to ID: 0
+
+1. Add Song
+2. Delete Song
+3. Show Playlist
+4. Exit
+Choose: 1
+Enter Song ID: khoobsurat
+Enter Song Name : Added: khoobsurat to ID: 0
+
+1. Add Song
+2. Delete Song
+3. Show Playlist
+4. Exit
+Choose: 1
+Enter Song ID: kasturi
+Enter Song Name : Added: kasturi to ID: 0
+
+1. Add Song
+2. Delete Song
+3. Show Playlist
+4. Exit
+Choose: 2
+Deleted: siya ram (ID: 0)
+
+1. Add Song
+2. Delete Song
+3. Show Playlist
+4. Exit
+Choose: 3
+Playlist:
+ID: 0, Name: sajna
+ID: 0, Name: khoobsurat
+ID: 0, Name: kasturi
+
+1. Add Song
+2. Delete Song
+3. Show Playlist
+4. Exit
+Choose:
